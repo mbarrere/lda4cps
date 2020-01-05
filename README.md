@@ -6,7 +6,7 @@
 - [Summary](#summary)
 - [Requirements](#requirements)
 - [Usage](#usage)
-- [Execution examples](#execution-examples)
+- [Execution example](#execution-example)
 - [Configuration parameters](#configuration-parameters)
 - [Licence](#licence)
 
