@@ -1,0 +1,771 @@
+{
+  "graph" : {
+    "source" : "_s_",
+    "target" : "PitchMACC",
+    "nodes" : [ {
+      "id" : "PitchMACC",
+      "type" : "function",
+      "value" : "0",
+      "label" : "-",
+      "measures" : null,
+      "icon" : "air/plane2.png"
+    }, {
+      "id" : "LH",
+      "type" : "Surface elevator",
+      "value" : "1.0E-4",
+      "label" : "1.0E-4",
+      "measures" : null,
+      "icon" : "air/tail-left.png"
+    }, {
+      "id" : "RH",
+      "type" : "Surface elevator",
+      "value" : "1.0E-4",
+      "label" : "1.0E-4",
+      "measures" : null,
+      "icon" : "air/tail-right.png"
+    }, {
+      "id" : "PA1",
+      "type" : "Surface elevator actuator LH-1",
+      "value" : "0.002",
+      "label" : "0.002",
+      "measures" : null,
+      "icon" : "air/pitch-actuator.png"
+    }, {
+      "id" : "PA2",
+      "type" : "Surface elevator actuator LH-2",
+      "value" : "0.002",
+      "label" : "0.002",
+      "measures" : null,
+      "icon" : "air/pitch-actuator.png"
+    }, {
+      "id" : "PA3",
+      "type" : "Surface elevator actuator RH-1",
+      "value" : "0.002",
+      "label" : "0.002",
+      "measures" : null,
+      "icon" : "air/pitch-actuator.png"
+    }, {
+      "id" : "PA4",
+      "type" : "Surface elevator actuator RH-2",
+      "value" : "0.002",
+      "label" : "0.002",
+      "measures" : null,
+      "icon" : "air/pitch-actuator.png"
+    }, {
+      "id" : "PCC1",
+      "type" : "Pitch Control Computer 1",
+      "value" : "5.0E-4",
+      "label" : "5.0E-4",
+      "measures" : null,
+      "icon" : "air/host.png"
+    }, {
+      "id" : "PCC2",
+      "type" : "Pitch Control Computer 2",
+      "value" : "5.0E-4",
+      "label" : "5.0E-4",
+      "measures" : null,
+      "icon" : "air/host.png"
+    }, {
+      "id" : "PCC3",
+      "type" : "Pitch Control Computer 3",
+      "value" : "5.0E-4",
+      "label" : "5.0E-4",
+      "measures" : null,
+      "icon" : "air/host.png"
+    }, {
+      "id" : "PCC4",
+      "type" : "Pitch Control Computer 4",
+      "value" : "5.0E-4",
+      "label" : "5.0E-4",
+      "measures" : null,
+      "icon" : "air/host.png"
+    }, {
+      "id" : "PCC1_INST",
+      "type" : "PCC1 installation location",
+      "value" : "0.01",
+      "label" : "0.01",
+      "measures" : null,
+      "icon" : "air/location2.png"
+    }, {
+      "id" : "PCC2_INST",
+      "type" : "PCC2 installation location",
+      "value" : "0.01",
+      "label" : "0.01",
+      "measures" : null,
+      "icon" : "air/location2.png"
+    }, {
+      "id" : "PCC3_INST",
+      "type" : "PCC3 installation location",
+      "value" : "0.01",
+      "label" : "0.01",
+      "measures" : null,
+      "icon" : "air/location2.png"
+    }, {
+      "id" : "PCC4_INST",
+      "type" : "PCC4 installation location",
+      "value" : "0.01",
+      "label" : "0.01",
+      "measures" : null,
+      "icon" : "air/location2.png"
+    }, {
+      "id" : "PCC1_PWR1",
+      "type" : "PCC1 - Power input 1",
+      "value" : "0.03",
+      "label" : "0.03",
+      "measures" : null,
+      "icon" : "air/power2.png"
+    }, {
+      "id" : "PCC1_PWR2",
+      "type" : "PCC1 - Power input 2",
+      "value" : "0.03",
+      "label" : "0.03",
+      "measures" : null,
+      "icon" : "air/power2.png"
+    }, {
+      "id" : "PCC1_PWR",
+      "type" : "or",
+      "value" : "none",
+      "label" : null,
+      "measures" : null,
+      "icon" : null
+    }, {
+      "id" : "PCC2_PWR1",
+      "type" : "PCC2 - Power input 1",
+      "value" : "0.03",
+      "label" : "0.03",
+      "measures" : null,
+      "icon" : "air/power2.png"
+    }, {
+      "id" : "PCC2_PWR2",
+      "type" : "PCC2 - Power input 2",
+      "value" : "0.03",
+      "label" : "0.03",
+      "measures" : null,
+      "icon" : "air/power2.png"
+    }, {
+      "id" : "PCC2_PWR",
+      "type" : "or",
+      "value" : "none",
+      "label" : null,
+      "measures" : null,
+      "icon" : null
+    }, {
+      "id" : "PCC3_PWR1",
+      "type" : "PCC3 - Power input 1",
+      "value" : "0.03",
+      "label" : "0.03",
+      "measures" : null,
+      "icon" : "air/power2.png"
+    }, {
+      "id" : "PCC3_PWR2",
+      "type" : "PCC3 - Power input 2",
+      "value" : "0.03",
+      "label" : "0.03",
+      "measures" : null,
+      "icon" : "air/power2.png"
+    }, {
+      "id" : "PCC3_PWR",
+      "type" : "or",
+      "value" : "none",
+      "label" : null,
+      "measures" : null,
+      "icon" : null
+    }, {
+      "id" : "PCC4_PWR1",
+      "type" : "PCC4 - Power input 1",
+      "value" : "0.03",
+      "label" : "0.03",
+      "measures" : null,
+      "icon" : "air/power2.png"
+    }, {
+      "id" : "PCC4_PWR2",
+      "type" : "PCC4 - Power input 2",
+      "value" : "0.03",
+      "label" : "0.03",
+      "measures" : null,
+      "icon" : "air/power2.png"
+    }, {
+      "id" : "PCC4_PWR",
+      "type" : "or",
+      "value" : "none",
+      "label" : null,
+      "measures" : null,
+      "icon" : null
+    }, {
+      "id" : "SP1",
+      "type" : "Sensor Package 1 - Captain side",
+      "value" : "0.05",
+      "label" : "0.05",
+      "measures" : null,
+      "icon" : "air/sensor.png"
+    }, {
+      "id" : "SP2",
+      "type" : "Sensor Package 2 - Captain side",
+      "value" : "0.05",
+      "label" : "0.05",
+      "measures" : null,
+      "icon" : "air/sensor.png"
+    }, {
+      "id" : "SP3",
+      "type" : "Sensor Package 3 - First Officer side",
+      "value" : "0.05",
+      "label" : "0.05",
+      "measures" : null,
+      "icon" : "air/sensor.png"
+    }, {
+      "id" : "SP4",
+      "type" : "Sensor Package 4 - First Officer side",
+      "value" : "0.05",
+      "label" : "0.05",
+      "measures" : null,
+      "icon" : "air/sensor.png"
+    }, {
+      "id" : "EN1",
+      "type" : "Engine 1",
+      "value" : "1.0E-6",
+      "label" : "1.0E-6",
+      "measures" : null,
+      "icon" : "air/turbine.png"
+    }, {
+      "id" : "EN2",
+      "type" : "Engine 2",
+      "value" : "1.0E-6",
+      "label" : "1.0E-6",
+      "measures" : null,
+      "icon" : "air/turbine.png"
+    }, {
+      "id" : "HPS1",
+      "type" : "Hydraulic Power Supply 1",
+      "value" : "1.0E-6",
+      "label" : "1.0E-6",
+      "measures" : null,
+      "icon" : "air/icon-pump.png"
+    }, {
+      "id" : "HPS2",
+      "type" : "Hydraulic Power Supply 2",
+      "value" : "1.0E-6",
+      "label" : "1.0E-6",
+      "measures" : null,
+      "icon" : "air/icon-pump.png"
+    }, {
+      "id" : "LH-or-RH",
+      "type" : "or",
+      "value" : "none",
+      "label" : null,
+      "measures" : null,
+      "icon" : null
+    }, {
+      "id" : "LH-CHNLS",
+      "type" : "or",
+      "value" : "none",
+      "label" : null,
+      "measures" : null,
+      "icon" : null
+    }, {
+      "id" : "RH-CHNLS",
+      "type" : "or",
+      "value" : "none",
+      "label" : null,
+      "measures" : null,
+      "icon" : null
+    }, {
+      "id" : "PA1-inputs",
+      "type" : "and",
+      "value" : "none",
+      "label" : null,
+      "measures" : null,
+      "icon" : null
+    }, {
+      "id" : "PA2-inputs",
+      "type" : "and",
+      "value" : "none",
+      "label" : null,
+      "measures" : null,
+      "icon" : null
+    }, {
+      "id" : "PA3-inputs",
+      "type" : "and",
+      "value" : "none",
+      "label" : null,
+      "measures" : null,
+      "icon" : null
+    }, {
+      "id" : "PA4-inputs",
+      "type" : "and",
+      "value" : "none",
+      "label" : null,
+      "measures" : null,
+      "icon" : null
+    }, {
+      "id" : "HPS1-inputs",
+      "type" : "or",
+      "value" : "none",
+      "label" : null,
+      "measures" : null,
+      "icon" : null
+    }, {
+      "id" : "HPS2-inputs",
+      "type" : "or",
+      "value" : "none",
+      "label" : null,
+      "measures" : null,
+      "icon" : null
+    }, {
+      "id" : "PCC1-inputs",
+      "type" : "and",
+      "value" : "none",
+      "label" : null,
+      "measures" : null,
+      "icon" : null
+    }, {
+      "id" : "PCC2-inputs",
+      "type" : "and",
+      "value" : "none",
+      "label" : null,
+      "measures" : null,
+      "icon" : null
+    }, {
+      "id" : "PCC3-inputs",
+      "type" : "and",
+      "value" : "none",
+      "label" : null,
+      "measures" : null,
+      "icon" : null
+    }, {
+      "id" : "PCC4-inputs",
+      "type" : "and",
+      "value" : "none",
+      "label" : null,
+      "measures" : null,
+      "icon" : null
+    }, {
+      "id" : "sensors-or",
+      "type" : "or",
+      "value" : "none",
+      "label" : null,
+      "measures" : null,
+      "icon" : null
+    }, {
+      "id" : "CTRL-CAPTAIN",
+      "type" : "Control column - Captain side",
+      "value" : "6.0E-5",
+      "label" : "6.0E-5",
+      "measures" : null,
+      "icon" : "air/column-control.png"
+    }, {
+      "id" : "CTRL-OFFICER",
+      "type" : "Control column - First Officer side",
+      "value" : "8.0E-5",
+      "label" : "8.0E-5",
+      "measures" : null,
+      "icon" : "air/column-control.png"
+    }, {
+      "id" : "_s_",
+      "type" : "init",
+      "value" : "0",
+      "label" : "-",
+      "measures" : null,
+      "icon" : null
+    } ],
+    "edges" : [ {
+      "source" : "LH-or-RH",
+      "target" : "PitchMACC",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "LH",
+      "target" : "LH-or-RH",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "RH",
+      "target" : "LH-or-RH",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "LH-CHNLS",
+      "target" : "LH",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "RH-CHNLS",
+      "target" : "RH",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "PA1",
+      "target" : "LH-CHNLS",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "PA2",
+      "target" : "LH-CHNLS",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "PA3",
+      "target" : "RH-CHNLS",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "PA4",
+      "target" : "RH-CHNLS",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "HPS1-inputs",
+      "target" : "HPS1",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "HPS2-inputs",
+      "target" : "HPS2",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "EN1",
+      "target" : "HPS1-inputs",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "EN2",
+      "target" : "HPS1-inputs",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "EN1",
+      "target" : "HPS2-inputs",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "EN2",
+      "target" : "HPS2-inputs",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "PA1-inputs",
+      "target" : "PA1",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "PA2-inputs",
+      "target" : "PA2",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "PA3-inputs",
+      "target" : "PA3",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "PA4-inputs",
+      "target" : "PA4",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "PCC1",
+      "target" : "PA1-inputs",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "HPS1",
+      "target" : "PA1-inputs",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "PCC2",
+      "target" : "PA2-inputs",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "HPS2",
+      "target" : "PA2-inputs",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "PCC3",
+      "target" : "PA3-inputs",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "HPS1",
+      "target" : "PA3-inputs",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "PCC4",
+      "target" : "PA4-inputs",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "HPS2",
+      "target" : "PA4-inputs",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "PCC1-inputs",
+      "target" : "PCC1",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "SP1",
+      "target" : "PCC1-inputs",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "PCC1_INST",
+      "target" : "PCC1-inputs",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "PCC1_PWR",
+      "target" : "PCC1-inputs",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "PCC1_PWR1",
+      "target" : "PCC1_PWR",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "PCC1_PWR2",
+      "target" : "PCC1_PWR",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "EN1",
+      "target" : "PCC1_PWR1",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "EN2",
+      "target" : "PCC1_PWR2",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "PCC2-inputs",
+      "target" : "PCC2",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "SP2",
+      "target" : "PCC2-inputs",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "PCC2_INST",
+      "target" : "PCC2-inputs",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "PCC2_PWR",
+      "target" : "PCC2-inputs",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "PCC2_PWR1",
+      "target" : "PCC2_PWR",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "PCC2_PWR2",
+      "target" : "PCC2_PWR",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "EN1",
+      "target" : "PCC2_PWR1",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "EN2",
+      "target" : "PCC2_PWR2",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "PCC3-inputs",
+      "target" : "PCC3",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "SP3",
+      "target" : "PCC3-inputs",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "PCC3_INST",
+      "target" : "PCC3-inputs",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "PCC3_PWR",
+      "target" : "PCC3-inputs",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "PCC3_PWR1",
+      "target" : "PCC3_PWR",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "PCC3_PWR2",
+      "target" : "PCC3_PWR",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "EN1",
+      "target" : "PCC3_PWR1",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "EN2",
+      "target" : "PCC3_PWR2",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "PCC4-inputs",
+      "target" : "PCC4",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "SP4",
+      "target" : "PCC4-inputs",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "PCC4_INST",
+      "target" : "PCC4-inputs",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "PCC4_PWR",
+      "target" : "PCC4-inputs",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "PCC4_PWR1",
+      "target" : "PCC4_PWR",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "PCC4_PWR2",
+      "target" : "PCC4_PWR",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "EN1",
+      "target" : "PCC4_PWR1",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "EN2",
+      "target" : "PCC4_PWR2",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "sensors-or",
+      "target" : "SP1",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "sensors-or",
+      "target" : "SP2",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "sensors-or",
+      "target" : "SP3",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "sensors-or",
+      "target" : "SP4",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "CTRL-CAPTAIN",
+      "target" : "sensors-or",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "CTRL-OFFICER",
+      "target" : "sensors-or",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "_s_",
+      "target" : "PCC1_INST",
+      "value" : "inf",
+      "label" : "init-PCC1 installation location"
+    }, {
+      "source" : "_s_",
+      "target" : "PCC2_INST",
+      "value" : "inf",
+      "label" : "init-PCC2 installation location"
+    }, {
+      "source" : "_s_",
+      "target" : "PCC3_INST",
+      "value" : "inf",
+      "label" : "init-PCC3 installation location"
+    }, {
+      "source" : "_s_",
+      "target" : "PCC4_INST",
+      "value" : "inf",
+      "label" : "init-PCC4 installation location"
+    }, {
+      "source" : "_s_",
+      "target" : "EN1",
+      "value" : "inf",
+      "label" : "init-Engine 1"
+    }, {
+      "source" : "_s_",
+      "target" : "EN2",
+      "value" : "inf",
+      "label" : "init-Engine 2"
+    }, {
+      "source" : "_s_",
+      "target" : "CTRL-CAPTAIN",
+      "value" : "inf",
+      "label" : "init-Control column - Captain side"
+    }, {
+      "source" : "_s_",
+      "target" : "CTRL-OFFICER",
+      "value" : "inf",
+      "label" : "init-Control column - First Officer side"
+    } ]
+  },
+  "cut" : {
+    "nodes" : [ {
+      "id" : "SP1",
+      "type" : "Sensor Package 1 - Captain side",
+      "value" : "0.05",
+      "label" : "0.05",
+      "measures" : null,
+      "icon" : "air/sensor.png"
+    }, {
+      "id" : "SP2",
+      "type" : "Sensor Package 2 - Captain side",
+      "value" : "0.05",
+      "label" : "0.05",
+      "measures" : null,
+      "icon" : "air/sensor.png"
+    }, {
+      "id" : "SP3",
+      "type" : "Sensor Package 3 - First Officer side",
+      "value" : "0.05",
+      "label" : "0.05",
+      "measures" : null,
+      "icon" : "air/sensor.png"
+    }, {
+      "id" : "SP4",
+      "type" : "Sensor Package 4 - First Officer side",
+      "value" : "0.05",
+      "label" : "0.05",
+      "measures" : null,
+      "icon" : "air/sensor.png"
+    } ],
+    "measureByInstanceIdMap" : { },
+    "cost" : 6.3E-6,
+    "solverId" : "MAX-SAT-SOLVER"
+  }
+}

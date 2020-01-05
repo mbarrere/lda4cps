@@ -1,0 +1,149 @@
+{ "graph": {
+ 	"target":"PitchMACC",
+ 	"nodes": [
+ 	{ "id": "PitchMACC", "type": "function", "value": "inf", "icon": "air/plane2.png" },
+ 	{ "id": "LH", "type": "Surface elevator", "value": "0.0001", "icon": "air/tail-left.png" },
+ 	{ "id": "RH", "type": "Surface elevator", "value": "0.0001", "icon": "air/tail-right.png" },
+
+ 	{ "id": "PA1", "type": "Surface elevator actuator LH-1", "value": "0.002", "icon": "air/pitch-actuator.png" },
+ 	{ "id": "PA2", "type": "Surface elevator actuator LH-2", "value": "0.002", "icon": "air/pitch-actuator.png" },
+ 	{ "id": "PA3", "type": "Surface elevator actuator RH-1", "value": "1.0", "icon": "air/pitch-actuator.png" },
+ 	{ "id": "PA4", "type": "Surface elevator actuator RH-2", "value": "1.0", "icon": "air/pitch-actuator.png" },
+
+  { "id": "PCC1", "type": "Pitch Control Computer 1", "value": "0.0005", "icon": "air/host.png" },
+  { "id": "PCC2", "type": "Pitch Control Computer 2", "value": "0.0005", "icon": "air/host.png" },
+  { "id": "PCC3", "type": "Pitch Control Computer 3", "value": "0.0005", "icon": "air/host.png" },
+  { "id": "PCC4", "type": "Pitch Control Computer 4", "value": "0.0005", "icon": "air/host.png" },
+
+  { "id": "PCC1_INST", "type": "PCC1 installation location", "value": "0.01", "icon": "air/location2.png" },
+  { "id": "PCC2_INST", "type": "PCC2 installation location", "value": "0.01", "icon": "air/location2.png" },
+  { "id": "PCC3_INST", "type": "PCC3 installation location", "value": "0.01", "icon": "air/location2.png" },
+  { "id": "PCC4_INST", "type": "PCC4 installation location", "value": "0.01", "icon": "air/location2.png" },
+
+  { "id": "PCC1_PWR1", "type": "PCC1 - Power input 1", "value": "0.03", "icon": "air/power2.png" },
+  { "id": "PCC1_PWR2", "type": "PCC1 - Power input 2", "value": "0.03", "icon": "air/power2.png" },
+  { "id": "PCC1_PWR", "type": "or", "value": "none" },
+  { "id": "PCC2_PWR1", "type": "PCC2 - Power input 1", "value": "0.03", "icon": "air/power2.png" },
+  { "id": "PCC2_PWR2", "type": "PCC2 - Power input 2", "value": "0.03", "icon": "air/power2.png" },
+  { "id": "PCC2_PWR", "type": "or", "value": "none" },
+  { "id": "PCC3_PWR1", "type": "PCC3 - Power input 1", "value": "0.03", "icon": "air/power2.png" },
+  { "id": "PCC3_PWR2", "type": "PCC3 - Power input 2", "value": "0.03", "icon": "air/power2.png" },
+  { "id": "PCC3_PWR", "type": "or", "value": "none" },
+  { "id": "PCC4_PWR1", "type": "PCC4 - Power input 1", "value": "0.03", "icon": "air/power2.png" },
+  { "id": "PCC4_PWR2", "type": "PCC4 - Power input 2", "value": "0.03", "icon": "air/power2.png" },
+  { "id": "PCC4_PWR", "type": "or", "value": "none" },
+
+  { "id": "SP1", "type": "Sensor Package 1 - Captain side", "value": "0.05", "icon": "air/sensor.png" },
+  { "id": "SP2", "type": "Sensor Package 2 - Captain side", "value": "0.05", "icon": "air/sensor.png" },
+  { "id": "SP3", "type": "Sensor Package 3 - First Officer side", "value": "0.05", "icon": "air/sensor.png" },
+  { "id": "SP4", "type": "Sensor Package 4 - First Officer side", "value": "0.05", "icon": "air/sensor.png" },
+
+  { "id": "EN1", "type": "Engine 1", "value": "0.000001", "icon": "air/turbine.png" },
+  { "id": "EN2", "type": "Engine 2", "value": "0.000001", "icon": "air/turbine.png" },
+
+  { "id": "HPS1", "type": "Hydraulic Power Supply 1", "value": "0.000001", "icon": "air/icon-pump.png" },
+  { "id": "HPS2", "type": "Hydraulic Power Supply 2", "value": "0.000001", "icon": "air/icon-pump.png" },
+
+
+  { "id": "LH-or-RH", "type": "or", "value": "none" },
+  { "id": "LH-CHNLS", "type": "or", "value": "none" },
+  { "id": "RH-CHNLS", "type": "or", "value": "none" },
+
+  { "id": "PA1-inputs", "type": "and", "value": "none" },
+  { "id": "PA2-inputs", "type": "and", "value": "none" },
+  { "id": "PA3-inputs", "type": "and", "value": "none" },
+  { "id": "PA4-inputs", "type": "and", "value": "none" },
+
+  { "id": "HPS1-inputs", "type": "or", "value": "none" },
+  { "id": "HPS2-inputs", "type": "or", "value": "none" },
+
+  { "id": "PCC1-inputs", "type": "and", "value": "none" },
+  { "id": "PCC2-inputs", "type": "and", "value": "none" },
+  { "id": "PCC3-inputs", "type": "and", "value": "none" },
+  { "id": "PCC4-inputs", "type": "and", "value": "none" },
+
+  { "id": "sensors-or", "type": "or", "value": "none" },
+  { "id": "CTRL-CAPTAIN", "type": "Control column - Captain side", "value": "0.00006", "icon": "air/column-control.png" },
+  { "id": "CTRL-OFFICER", "type": "Control column - First Officer side", "value": "0.00008", "icon": "air/column-control.png" }
+ 	],
+ 	"edges": [
+ 		{ "source": "LH-or-RH", "target": "PitchMACC" },
+		{ "source": "LH", "target": "LH-or-RH" },
+		{ "source": "RH", "target": "LH-or-RH" },
+
+		{ "source": "LH-CHNLS", "target": "LH" },
+		{ "source": "RH-CHNLS", "target": "RH" },
+
+		{ "source": "PA1", "target": "LH-CHNLS" },
+		{ "source": "PA2", "target": "LH-CHNLS" },
+		{ "source": "PA3", "target": "RH-CHNLS" },
+		{ "source": "PA4", "target": "RH-CHNLS" },
+
+    { "source": "HPS1-inputs", "target": "HPS1" },
+    { "source": "HPS2-inputs", "target": "HPS2" },
+    { "source": "EN1", "target": "HPS1-inputs" },
+    { "source": "EN2", "target": "HPS1-inputs" },
+    { "source": "EN1", "target": "HPS2-inputs" },
+    { "source": "EN2", "target": "HPS2-inputs" },
+
+    { "source": "PA1-inputs", "target": "PA1" },
+    { "source": "PA2-inputs", "target": "PA2" },
+    { "source": "PA3-inputs", "target": "PA3" },
+    { "source": "PA4-inputs", "target": "PA4" },
+
+    { "source": "PCC1", "target": "PA1-inputs" },
+    { "source": "HPS1", "target": "PA1-inputs" },
+    { "source": "PCC2", "target": "PA2-inputs" },
+    { "source": "HPS2", "target": "PA2-inputs" },
+    { "source": "PCC3", "target": "PA3-inputs" },
+    { "source": "HPS1", "target": "PA3-inputs" },
+    { "source": "PCC4", "target": "PA4-inputs" },
+    { "source": "HPS2", "target": "PA4-inputs" },
+
+    { "source": "PCC1-inputs", "target": "PCC1" },
+    { "source": "SP1", "target": "PCC1-inputs" },
+    { "source": "PCC1_INST", "target": "PCC1-inputs" },
+    { "source": "PCC1_PWR", "target": "PCC1-inputs" },
+    { "source": "PCC1_PWR1", "target": "PCC1_PWR" },
+    { "source": "PCC1_PWR2", "target": "PCC1_PWR" },
+    { "source": "EN1", "target": "PCC1_PWR1" },
+    { "source": "EN2", "target": "PCC1_PWR2" },
+
+    { "source": "PCC2-inputs", "target": "PCC2" },
+    { "source": "SP2", "target": "PCC2-inputs" },
+    { "source": "PCC2_INST", "target": "PCC2-inputs" },
+    { "source": "PCC2_PWR", "target": "PCC2-inputs" },
+    { "source": "PCC2_PWR1", "target": "PCC2_PWR" },
+    { "source": "PCC2_PWR2", "target": "PCC2_PWR" },
+    { "source": "EN1", "target": "PCC2_PWR1" },
+    { "source": "EN2", "target": "PCC2_PWR2" },
+
+    { "source": "PCC3-inputs", "target": "PCC3" },
+    { "source": "SP3", "target": "PCC3-inputs" },
+    { "source": "PCC3_INST", "target": "PCC3-inputs" },
+    { "source": "PCC3_PWR", "target": "PCC3-inputs" },
+    { "source": "PCC3_PWR1", "target": "PCC3_PWR" },
+    { "source": "PCC3_PWR2", "target": "PCC3_PWR" },
+    { "source": "EN1", "target": "PCC3_PWR1" },
+    { "source": "EN2", "target": "PCC3_PWR2" },
+
+    { "source": "PCC4-inputs", "target": "PCC4" },
+    { "source": "SP4", "target": "PCC4-inputs" },
+    { "source": "PCC4_INST", "target": "PCC4-inputs" },
+    { "source": "PCC4_PWR", "target": "PCC4-inputs" },
+    { "source": "PCC4_PWR1", "target": "PCC4_PWR" },
+    { "source": "PCC4_PWR2", "target": "PCC4_PWR" },
+    { "source": "EN1", "target": "PCC4_PWR1" },
+    { "source": "EN2", "target": "PCC4_PWR2" },
+
+    { "source": "sensors-or", "target": "SP1" },
+    { "source": "sensors-or", "target": "SP2" },
+    { "source": "sensors-or", "target": "SP3" },
+    { "source": "sensors-or", "target": "SP4" },
+
+    { "source": "CTRL-CAPTAIN", "target": "sensors-or" },
+    { "source": "CTRL-OFFICER", "target": "sensors-or" }
+ 	],
+ 	"measures": [ 	]
+ 	}
+ 	}
