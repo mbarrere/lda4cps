@@ -13,11 +13,11 @@
 ## Summary
 Cyber-Physical Systems (CPS) often involve complex networks of interconnected software and hardware components that are logically combined to achieve a common goal or mission, for example, keeping a plane on the air or providing energy to a city. Failures on these components may jeopardise the mission of the system. Therefore, identifying the minimal set of critical CPS components that is most likely to fail and prevent the global system from delivering its mission becomes essential to ensure reliability. 
 
-LDA4CPS is a Java-based tool that has been designed to identify the most likely mission-critical component set (MLCS) using AND/OR dependency graphs enriched with independent failure probabilities. We address the problem from a logical satisfiability perspective, more specifically, as a Weighted Partial MaxSAT problem. Probabilities are translated into a negative logarithmic space in order to linearise the problem within MaxSAT. 
+LDA4CPS is a Java-based tool built on top of META4ICS(https://github.com/mbarrere/meta4ics) that has been designed to identify the *most likely mission-critical component set (MLCS)* using *AND/OR dependency graphs* enriched with *independent failure probabilities*. We address the problem from a logical satisfiability perspective, more specifically, as a Weighted Partial MaxSAT problem. Probabilities are translated into a negative logarithmic space in order to linearise the problem within MaxSAT. 
 
 The identification of MLCS in cyber-physical systems provides support to reason about the strength of a system’s design. 
 Therefore, LDA4CPS can be used to help automate the evaluation of potential designs over a space of different system configurations.
-LDA4CPS studies the robustness of a mission design from a dependency analysis point of view.
+We study the robustness of a mission design from a dependency analysis point of view.
 The tool includes examples of aircraft dependency models using AND/OR graphs and failure probabilities. 
 While the examples are mostly focused on complex aircraft systems, LDA4CPS is abstract enough to deal with AND/OR graph-based models representing other kinds of mission-critical cyber-physical systems.
 
@@ -30,9 +30,7 @@ While the examples are mostly focused on complex aircraft systems, LDA4CPS is ab
 ## Usage
 
 1. ```java -jar lda4cps.jar inputFile.json [-c configFile]```  
-This command executes LDA4CPS with an input JSON file that describes the network under analysis.
-The method used by LDA4CPS to identify critical nodes is fully described in our paper:
-[Identifying Security-Critical Cyber-Physical Components in Industrial Control Systems](https://arxiv.org/abs/1905.04796)
+This command executes LDA4CPS with an input JSON file that describes the dependency network under analysis.
 
 2. ```./web-viewer.py```  
 This command launches the webviewer (Python-based HTTP server) that displays the AND/OR graph as well as its critical nodes.
