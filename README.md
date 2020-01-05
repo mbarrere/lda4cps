@@ -33,14 +33,14 @@ While the examples are mostly focused on complex aircraft systems, LDA4CPS is ab
 This command executes LDA4CPS with an input JSON file that describes the dependency network under analysis.
 
 2. ```./web-viewer.py```  
-This command launches the webviewer (Python-based HTTP server) that displays the AND/OR graph as well as its critical nodes.
+This command launches the webviewer (Python-based HTTP server) that displays the AND/OR graph as well as the most likely critical set.
 By default, the webviewer reads the file *view/sol.json* and displays it at [http://localhost:8000/viz.html](http://localhost:8000/viz.html)
 
 
 
 ## Execution example
 
-### Example: Aircraft - Case 1
+### Aircraft system - Case 1
 ```
 $> java -jar lda4cps.jar examples/aircraft-case1.json
 ```
@@ -80,7 +80,7 @@ Running in Python 2...
 ('Started HTTP server on port ', 8000)
 ```
 In the browser, go to [http://localhost:8000/viz.html](http://localhost:8000/viz.html)  
-You should see the following AND/OR graph along with its critical nodes (*a* and *c*):
+You should see the following AND/OR graph along with the MLCS (*SP1*, *SP2*, *SP3*, *SP4*):
 
 ![Screenshot - simple example](https://github.com/mbarrere/lda4cps/blob/master/screenshots/aircraft-case1.png)
 
