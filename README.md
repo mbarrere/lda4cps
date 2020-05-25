@@ -13,9 +13,9 @@
 ## Summary
 Cyber-Physical Systems (CPS) often involve complex networks of interconnected software and hardware components that are logically combined to achieve a common goal or mission, for example, keeping a plane on the air or providing energy to a city. Failures on these components may jeopardise the mission of the system. Therefore, identifying the minimal set of critical CPS components that is most likely to fail and prevent the global system from delivering its mission becomes essential to ensure reliability.
 
-LDA4CPS is a Java-based tool, built on top of [META4ICS](https://github.com/mbarrere/meta4ics), that has been designed to identify the *most likely mission-critical component set (MLCS)* using *AND/OR dependency graphs* enriched with *independent failure probabilities*. We address the problem from a logical satisfiability perspective, more specifically, as a Weighted Partial MaxSAT problem. Probabilities are translated into a negative logarithmic space in order to linearise the problem within MaxSAT.
+LDA4CPS is a Java-based tool, built on top of [META4ICS](https://github.com/mbarrere/meta4ics), that has been designed to identify the *most likely mission-critical component set (MLMCS)* using *AND/OR dependency graphs* enriched with *independent failure probabilities*. We address the problem from a logical satisfiability perspective, more specifically, as a Weighted Partial MaxSAT problem. Probabilities are translated into a negative logarithmic space in order to linearise the problem within MaxSAT.
 
-The identification of MLCS in cyber-physical systems provides support to reason about the strength of a system’s design.
+The identification of MLMCS in cyber-physical systems provides support to reason about the strength of a system’s design.
 Therefore, LDA4CPS can be used to help automate the evaluation of potential designs over a space of different system configurations.
 We study the robustness of a mission design from a dependency analysis point of view.
 The tool includes examples of aircraft dependency models using AND/OR graphs and failure probabilities.
