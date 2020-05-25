@@ -88,7 +88,7 @@ You should see the following AND/OR graph along with the MLMCS (*LH*, *RH*) mark
 
 ### Aircraft system - Case 2
 
-System upgrades. A natural use of the proposed metric is to make decisions based on the identified critical components. This scenario (case 2) shows an hypothetical case where both elevator surfaces LH and LR have been upgraded and now have a lower failure probability (0.001).
+System upgrades. A natural use of the proposed metric is to make decisions based on the identified critical components. This scenario (case 2) shows an hypothetical case where both elevator surfaces *LH* and *LR* have been upgraded and now have a lower failure probability (0.001).
 
 ```
 $> java -jar lda4cps.jar examples/aircraft-case2.json
@@ -126,7 +126,7 @@ You should see the following AND/OR graph along with the MLMCS (*SP1*, *SP2*, *S
 
 ### Aircraft system - Case 3
 
-Understanding whether the mission can still be fulfilled under the presence of failures is vital during design stages. Our approach can easily model failed components vi by simply considering p(vi) = 1.0. This scenario (case 3) involves a what-if situation where two different actuators (PA3 and PA4) have failed due to freezing conditions.
+Understanding whether the mission can still be fulfilled under the presence of failures is vital during design stages. Our approach can easily model failed components *v* by simply considering *p(v) = 1.0*. This scenario (case 3) involves a what-if situation where two different actuators (*PA3* and *PA4*) have failed due to freezing conditions.
 ```
 $> java -jar lda4cps.jar examples/aircraft-case3.json
 ```
@@ -158,6 +158,7 @@ Solution saved in: ./view/sol.json
 ```
 Go to [http://localhost:8000/viz.html](http://localhost:8000/viz.html)  
 You should see the following AND/OR graph along with the MLMCS (*SP1*, *SP2*) and failed components (*PA3*, *PA4*) marked with red dashed squares:
+
 ![Screenshot - aircraft case 3](https://github.com/mbarrere/lda4cps/blob/master/screenshots/aircraft-case3.png)
 
 ---
