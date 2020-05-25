@@ -1,5 +1,5 @@
 # LDA4CPS - Logical Dependency Analyser for Cyber-Physical Systems
-### Version 0.62.1
+### Version 0.62.5
 
 
 ## Contents
@@ -11,14 +11,14 @@
 - [Licence](#licence)
 
 ## Summary
-Cyber-Physical Systems (CPS) often involve complex networks of interconnected software and hardware components that are logically combined to achieve a common goal or mission, for example, keeping a plane on the air or providing energy to a city. Failures on these components may jeopardise the mission of the system. Therefore, identifying the minimal set of critical CPS components that is most likely to fail and prevent the global system from delivering its mission becomes essential to ensure reliability. 
+Cyber-Physical Systems (CPS) often involve complex networks of interconnected software and hardware components that are logically combined to achieve a common goal or mission, for example, keeping a plane on the air or providing energy to a city. Failures on these components may jeopardise the mission of the system. Therefore, identifying the minimal set of critical CPS components that is most likely to fail and prevent the global system from delivering its mission becomes essential to ensure reliability.
 
-LDA4CPS is a Java-based tool, built on top of [META4ICS](https://github.com/mbarrere/meta4ics), that has been designed to identify the *most likely mission-critical component set (MLCS)* using *AND/OR dependency graphs* enriched with *independent failure probabilities*. We address the problem from a logical satisfiability perspective, more specifically, as a Weighted Partial MaxSAT problem. Probabilities are translated into a negative logarithmic space in order to linearise the problem within MaxSAT. 
+LDA4CPS is a Java-based tool, built on top of [META4ICS](https://github.com/mbarrere/meta4ics), that has been designed to identify the *most likely mission-critical component set (MLCS)* using *AND/OR dependency graphs* enriched with *independent failure probabilities*. We address the problem from a logical satisfiability perspective, more specifically, as a Weighted Partial MaxSAT problem. Probabilities are translated into a negative logarithmic space in order to linearise the problem within MaxSAT.
 
-The identification of MLCS in cyber-physical systems provides support to reason about the strength of a system’s design. 
+The identification of MLCS in cyber-physical systems provides support to reason about the strength of a system’s design.
 Therefore, LDA4CPS can be used to help automate the evaluation of potential designs over a space of different system configurations.
 We study the robustness of a mission design from a dependency analysis point of view.
-The tool includes examples of aircraft dependency models using AND/OR graphs and failure probabilities. 
+The tool includes examples of aircraft dependency models using AND/OR graphs and failure probabilities.
 While the examples are mostly focused on complex aircraft systems, LDA4CPS is abstract enough to deal with AND/OR graph-based models representing other kinds of mission-critical cyber-physical systems.
 
 
@@ -45,15 +45,15 @@ By default, the webviewer reads the file *view/sol.json* and displays it at [htt
 $> java -jar lda4cps.jar examples/aircraft-case1.json
 ```
 ```
-== LDA4CPS v0.62.1 ==
-== Started at 2020-01-05 15:34:52.46 ==
+== LDA4CPS v0.62.5 ==
+== Started at 2020-05-25 01:51:49.326 ==
 
-=> Loading problem specification...  done in 255 ms (0 seconds).
+=> Loading problem specification...  done in 277 ms (0 seconds).
 ----------------------------------
 Problem source: _s_
 Problem target: PitchMACC
 ----------------------------------
-=> Performing Tseitin transformation...  done in 135 ms (0 seconds).
+=> Performing Tseitin transformation...  done in 141 ms (0 seconds).
 |+| Solvers: [MaxSAT]
 
 ==================================
@@ -61,14 +61,14 @@ Problem target: PitchMACC
 Source: _s_
 Target: PitchMACC
 === Security Metric ===
-Joint probability of failure: 6.3E-6
+Joint probability of failure: 0.0016
 [+] Failed nodes: none
-Total critical nodes: 4
-[+] Most likely critical set (MLCS): (SP1,0.05); (SP2,0.05); (SP3,0.05); (SP4,0.05);
-[*] Metric computation time: 86 ms (0 seconds).
+Total critical nodes: 2
+[+] Most likely mission-critical set (MLMCS): (LH,0.04); (RH,0.04);
+[*] Metric computation time: 91 ms (0 seconds).
 ==================================
 Solution saved in: ./view/sol.json
-== LDA4CPS ended at 2020-01-05 15:34:52.968 ==
+== LDA4CPS ended at 2020-05-25 01:51:49.869 ==
 ```
 
 ##### Run the webviewer:
@@ -80,12 +80,48 @@ Running in Python 2...
 ('Started HTTP server on port ', 8000)
 ```
 In the browser, go to [http://localhost:8000/viz.html](http://localhost:8000/viz.html)  
-You should see the following AND/OR graph along with the MLCS (*SP1*, *SP2*, *SP3*, *SP4*):
+You should see the following AND/OR graph along with the MLMCS (*LH*, *RH*):
 
-![Screenshot - simple example](https://github.com/mbarrere/lda4cps/blob/master/screenshots/aircraft-case1.png)
+![Screenshot - aircraft case 1](https://github.com/mbarrere/lda4cps/blob/master/screenshots/aircraft-case1.png)
+
+
+
+### Aircraft system - Case 2
+```
+$> java -jar lda4cps.jar examples/aircraft-case2.json
+```
+```
+== LDA4CPS v0.62.5 ==
+== Started at 2020-05-25 01:51:58.687 ==
+
+=> Loading problem specification...  done in 278 ms (0 seconds).
+----------------------------------
+Problem source: _s_
+Problem target: PitchMACC
+----------------------------------
+=> Performing Tseitin transformation...  done in 140 ms (0 seconds).
+|+| Solvers: [MaxSAT]
+
+==================================
+=> BEST solution found by MAX-SAT-SOLVER for:
+Source: _s_
+Target: PitchMACC
+=== Security Metric ===
+Joint probability of failure: 6.3E-6
+[+] Failed nodes: none
+Total critical nodes: 4
+[+] Most likely mission-critical set (MLMCS): (SP1,0.05); (SP2,0.05); (SP3,0.05); (SP4,0.05);
+[*] Metric computation time: 94 ms (0 seconds).
+==================================
+Solution saved in: ./view/sol.json
+== LDA4CPS ended at 2020-05-25 01:51:59.237 ==
+```
+Go to [http://localhost:8000/viz.html](http://localhost:8000/viz.html)  
+You should see the following AND/OR graph along with the MLMCS (*SP1*, *SP2*, *SP3*, *SP4*):
+
+![Screenshot - aircraft case 2](https://github.com/mbarrere/lda4cps/blob/master/screenshots/aircraft-case2.png)
 
 ---
-
 
 ## Configuration parameters
 The configuration parameters are stored in the file `lda4cps.conf`.
