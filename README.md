@@ -6,7 +6,7 @@
 - [Summary](#summary)
 - [Requirements](#requirements)
 - [Usage](#usage)
-- [Execution example](#execution-example)
+- [Execution examples](#execution-examples)
 - [Configuration parameters](#configuration-parameters)
 - [Licence](#licence)
 
@@ -38,7 +38,7 @@ By default, the webviewer reads the file *view/sol.json* and displays it at [htt
 
 
 
-## Execution example
+## Execution examples
 
 ### Aircraft system - Case 1
 ```
@@ -46,14 +46,14 @@ $> java -jar lda4cps.jar examples/aircraft-case1.json
 ```
 ```
 == LDA4CPS v0.62.5 ==
-== Started at 2020-05-25 01:51:49.326 ==
+== Started at 2020-05-25 18:55:26.237 ==
 
-=> Loading problem specification...  done in 277 ms (0 seconds).
+=> Loading problem specification...  done in 261 ms (0 seconds).
 ----------------------------------
 Problem source: _s_
 Problem target: PitchMACC
 ----------------------------------
-=> Performing Tseitin transformation...  done in 141 ms (0 seconds).
+=> Performing Tseitin transformation...  done in 137 ms (0 seconds).
 |+| Solvers: [MaxSAT]
 
 ==================================
@@ -65,10 +65,10 @@ Joint probability of failure: 0.0016
 [+] Failed nodes: none
 Total critical nodes: 2
 [+] Most likely mission-critical set (MLMCS): (LH,0.04); (RH,0.04);
-[*] Metric computation time: 91 ms (0 seconds).
+[*] Metric computation time: 86 ms (0 seconds).
 ==================================
 Solution saved in: ./view/sol.json
-== LDA4CPS ended at 2020-05-25 01:51:49.869 ==
+== LDA4CPS ended at 2020-05-25 18:55:26.753 ==
 ```
 
 ##### Run the webviewer:
@@ -80,26 +80,29 @@ Running in Python 2...
 ('Started HTTP server on port ', 8000)
 ```
 In the browser, go to [http://localhost:8000/viz.html](http://localhost:8000/viz.html)  
-You should see the following AND/OR graph along with the MLMCS (*LH*, *RH*):
+You should see the following AND/OR graph along with the MLMCS (*LH*, *RH*) marked with red dashed circles:
 
 ![Screenshot - aircraft case 1](https://github.com/mbarrere/lda4cps/blob/master/screenshots/aircraft-case1.png)
 
 
 
 ### Aircraft system - Case 2
+
+System upgrades. A natural use of the proposed metric is to make decisions based on the identified critical components. This scenario (case 2) shows an hypothetical case where both elevator surfaces LH and LR have been upgraded and now have a lower failure probability (0.001).
+
 ```
 $> java -jar lda4cps.jar examples/aircraft-case2.json
 ```
 ```
 == LDA4CPS v0.62.5 ==
-== Started at 2020-05-25 01:51:58.687 ==
+== Started at 2020-05-25 18:56:03.069 ==
 
-=> Loading problem specification...  done in 278 ms (0 seconds).
+=> Loading problem specification...  done in 266 ms (0 seconds).
 ----------------------------------
 Problem source: _s_
 Problem target: PitchMACC
 ----------------------------------
-=> Performing Tseitin transformation...  done in 140 ms (0 seconds).
+=> Performing Tseitin transformation...  done in 130 ms (0 seconds).
 |+| Solvers: [MaxSAT]
 
 ==================================
@@ -111,15 +114,51 @@ Joint probability of failure: 6.3E-6
 [+] Failed nodes: none
 Total critical nodes: 4
 [+] Most likely mission-critical set (MLMCS): (SP1,0.05); (SP2,0.05); (SP3,0.05); (SP4,0.05);
-[*] Metric computation time: 94 ms (0 seconds).
+[*] Metric computation time: 86 ms (0 seconds).
 ==================================
 Solution saved in: ./view/sol.json
-== LDA4CPS ended at 2020-05-25 01:51:59.237 ==
+== LDA4CPS ended at 2020-05-25 18:56:03.584 ==
 ```
 Go to [http://localhost:8000/viz.html](http://localhost:8000/viz.html)  
 You should see the following AND/OR graph along with the MLMCS (*SP1*, *SP2*, *SP3*, *SP4*):
 
 ![Screenshot - aircraft case 2](https://github.com/mbarrere/lda4cps/blob/master/screenshots/aircraft-case2.png)
+
+### Aircraft system - Case 3
+
+Understanding whether the mission can still be fulfilled under the presence of failures is vital during design stages. Our approach can easily model failed components vi by simply considering p(vi) = 1.0. This scenario (case 3) involves a what-if situation where two different actuators (PA3 and PA4) have failed due to freezing conditions.
+```
+$> java -jar lda4cps.jar examples/aircraft-case3.json
+```
+```
+== LDA4CPS v0.62.5 ==
+== Started at 2020-05-25 18:56:36.305 ==
+
+=> Loading problem specification...  done in 265 ms (0 seconds).
+----------------------------------
+Problem source: _s_
+Problem target: PitchMACC
+----------------------------------
+=> Performing Tseitin transformation...  done in 135 ms (0 seconds).
+|+| Solvers: [MaxSAT]
+
+==================================
+=> BEST solution found by MAX-SAT-SOLVER for:
+Source: _s_
+Target: PitchMACC
+=== Security Metric ===
+Joint probability of failure: 0.0025
+[+] Failed nodes: (PA3,1.0); (PA4,1.0);
+Total critical nodes: 2
+[+] Most likely mission-critical set (MLMCS): (SP1,0.05); (SP2,0.05);
+[*] Metric computation time: 83 ms (0 seconds).
+==================================
+Solution saved in: ./view/sol.json
+== LDA4CPS ended at 2020-05-25 18:56:36.823 ==
+```
+Go to [http://localhost:8000/viz.html](http://localhost:8000/viz.html)  
+You should see the following AND/OR graph along with the MLMCS (*SP1*, *SP2*) and failed components (*PA3*, *PA4*) marked with red dashed squares:
+![Screenshot - aircraft case 3](https://github.com/mbarrere/lda4cps/blob/master/screenshots/aircraft-case3.png)
 
 ---
 
