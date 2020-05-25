@@ -102,7 +102,7 @@ public class MaxProbSimpleTest {
 			ProblemSpecification problem = new JSONReader().loadProblemSpecification(filename);		
 			ProblemSolution sol = CpsMetricAnalyser.solveWithTseitinAndDisplaySolution(problem, config);					
 			
-			Double expectedCost = Double.valueOf(0.00000625);
+			Double expectedCost = Double.valueOf(0.0016);
 			Double actualCost = sol.getCut().getCost();
 			
 			Double roundedExpectedCost = Double.valueOf(GraphUtils.round(expectedCost.doubleValue(),CpsMetricAnalyser.DECIMAL_PLACES));
@@ -123,7 +123,7 @@ public class MaxProbSimpleTest {
 			ProblemSpecification problem = new JSONReader().loadProblemSpecification(filename);		
 			ProblemSolution sol = CpsMetricAnalyser.solveWithTseitinAndDisplaySolution(problem, config);
 			
-			Double expectedCost = Double.valueOf(0.0025);
+			Double expectedCost = Double.valueOf(0.00000625);
 			Double actualCost = sol.getCut().getCost();
 			
 			Double roundedExpectedCost = Double.valueOf(GraphUtils.round(expectedCost.doubleValue(),CpsMetricAnalyser.DECIMAL_PLACES));
@@ -166,7 +166,7 @@ public class MaxProbSimpleTest {
 			ProblemSolution sol = CpsMetricAnalyser.solveWithTseitinAndDisplaySolution(problem, config);
 			
 			int decimalPlaces = 2;
-			Double expectedCost = Double.valueOf(0.05);
+			Double expectedCost = Double.valueOf(0.0025);
 			Double actualCost = sol.getCut().getCost();
 			
 			Double roundedExpectedCost = Double.valueOf(GraphUtils.round(expectedCost.doubleValue(),decimalPlaces));
@@ -188,7 +188,7 @@ public class MaxProbSimpleTest {
 			ProblemSolution sol = CpsMetricAnalyser.solveWithTseitinAndDisplaySolution(problem, config);
 			
 			int decimalPlaces = CpsMetricAnalyser.DECIMAL_PLACES;
-			Double expectedCost = Double.valueOf(0.00000025);
+			Double expectedCost = Double.valueOf(0.05);
 			Double actualCost = sol.getCut().getCost();
 			
 			Double roundedExpectedCost = Double.valueOf(GraphUtils.round(expectedCost.doubleValue(),decimalPlaces));

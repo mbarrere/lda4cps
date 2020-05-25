@@ -12,15 +12,15 @@
     }, {
       "id" : "LH",
       "type" : "Surface elevator",
-      "value" : "1.0E-4",
-      "label" : "1.0E-4",
+      "value" : "0.04",
+      "label" : "0.04",
       "measures" : null,
       "icon" : "air/tail-left.png"
     }, {
       "id" : "RH",
       "type" : "Surface elevator",
-      "value" : "1.0E-4",
-      "label" : "1.0E-4",
+      "value" : "0.04",
+      "label" : "0.04",
       "measures" : null,
       "icon" : "air/tail-right.png"
     }, {
@@ -348,15 +348,15 @@
     }, {
       "id" : "CTRL-CAPTAIN",
       "type" : "Control column - Captain side",
-      "value" : "6.0E-5",
-      "label" : "6.0E-5",
+      "value" : "1.0E-5",
+      "label" : "1.0E-5",
       "measures" : null,
       "icon" : "air/column-control.png"
     }, {
       "id" : "CTRL-OFFICER",
       "type" : "Control column - First Officer side",
-      "value" : "8.0E-5",
-      "label" : "8.0E-5",
+      "value" : "1.0E-5",
+      "label" : "1.0E-5",
       "measures" : null,
       "icon" : "air/column-control.png"
     }, {
@@ -663,6 +663,26 @@
       "value" : null,
       "label" : null
     }, {
+      "source" : "PA1",
+      "target" : "PCC1-inputs",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "PA2",
+      "target" : "PCC2-inputs",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "PA3",
+      "target" : "PCC3-inputs",
+      "value" : null,
+      "label" : null
+    }, {
+      "source" : "PA4",
+      "target" : "PCC4-inputs",
+      "value" : null,
+      "label" : null
+    }, {
       "source" : "sensors-or",
       "target" : "SP1",
       "value" : null,
@@ -736,36 +756,22 @@
   },
   "cut" : {
     "nodes" : [ {
-      "id" : "SP1",
-      "type" : "Sensor Package 1 - Captain side",
-      "value" : "0.05",
-      "label" : "0.05",
+      "id" : "LH",
+      "type" : "Surface elevator",
+      "value" : "0.04",
+      "label" : "0.04",
       "measures" : null,
-      "icon" : "air/sensor.png"
+      "icon" : "air/tail-left.png"
     }, {
-      "id" : "SP2",
-      "type" : "Sensor Package 2 - Captain side",
-      "value" : "0.05",
-      "label" : "0.05",
+      "id" : "RH",
+      "type" : "Surface elevator",
+      "value" : "0.04",
+      "label" : "0.04",
       "measures" : null,
-      "icon" : "air/sensor.png"
-    }, {
-      "id" : "SP3",
-      "type" : "Sensor Package 3 - First Officer side",
-      "value" : "0.05",
-      "label" : "0.05",
-      "measures" : null,
-      "icon" : "air/sensor.png"
-    }, {
-      "id" : "SP4",
-      "type" : "Sensor Package 4 - First Officer side",
-      "value" : "0.05",
-      "label" : "0.05",
-      "measures" : null,
-      "icon" : "air/sensor.png"
+      "icon" : "air/tail-right.png"
     } ],
     "measureByInstanceIdMap" : { },
-    "cost" : 6.3E-6,
+    "cost" : 0.0016,
     "solverId" : "MAX-SAT-SOLVER"
   }
 }

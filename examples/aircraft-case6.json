@@ -63,8 +63,8 @@
   { "id": "PCC4-inputs", "type": "and", "value": "none" },
 
   { "id": "sensors-or", "type": "or", "value": "none" },
-  { "id": "CTRL-CAPTAIN", "type": "Control column - Captain side", "value": "0.00006", "icon": "air/column-control.png" },
-  { "id": "CTRL-OFFICER", "type": "Control column - First Officer side", "value": "0.00008", "icon": "air/column-control.png" }
+  { "id": "CTRL-CAPTAIN", "type": "Control column - Captain side", "value": "0.00001", "icon": "air/column-control.png" },
+  { "id": "CTRL-OFFICER", "type": "Control column - First Officer side", "value": "0.00001", "icon": "air/column-control.png" }
  	],
  	"edges": [
  		{ "source": "LH-or-RH", "target": "PitchMACC" },
@@ -135,6 +135,11 @@
     { "source": "PCC4_PWR2", "target": "PCC4_PWR" },
     { "source": "EN1", "target": "PCC4_PWR1" },
     { "source": "EN2", "target": "PCC4_PWR2" },
+
+    { "source": "PA1", "target": "PCC1-inputs" },
+    { "source": "PA2", "target": "PCC2-inputs" },
+    { "source": "PA3", "target": "PCC3-inputs" },
+    { "source": "PA4", "target": "PCC4-inputs" },
 
     { "source": "sensors-or", "target": "SP1" },
     { "source": "sensors-or", "target": "SP2" },

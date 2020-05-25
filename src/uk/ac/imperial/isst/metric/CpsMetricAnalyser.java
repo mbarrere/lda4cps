@@ -57,9 +57,8 @@ public class CpsMetricAnalyser {
 		return "Usage: java -jar " + TOOL_NAME.toLowerCase() + ".jar inputFile.json [-c configFile]";
 	}
 	
-	public static void main(String[] args) {
-		//String version = "v0.53.1";
-		String version = "v0.62.1";
+	public static void main(String[] args) {		
+		String version = "v0.62.5";
 		try {
 			System.out.println("== " + TOOL_NAME + " " + version + " ==");		
 			System.out.println("== Started at " + new Timestamp(System.currentTimeMillis()) + " ==");

@@ -134,7 +134,7 @@ public class SecurityMetric {
 		if (CpsMetricAnalyser.WEIGHTS_AS_PROBABILITIES) {
 			if (cost == 0.0) {
 				System.out.println("Total critical nodes: 0");
-				System.out.println("[+] Most likely critical set (MLCS): none");
+				System.out.println("[+] Most likely mission-critical set (MLMCS): none");
 				return;
 			}
 		}
@@ -147,7 +147,7 @@ public class SecurityMetric {
 		
 		/* ** MAX_PROBS ** */
 		if (CpsMetricAnalyser.WEIGHTS_AS_PROBABILITIES) {
-			System.out.print("[+] Most likely critical set (MLCS): ");		
+			System.out.print("[+] Most likely mission-critical set (MLMCS): ");		
 		} else {
 			System.out.print("[+] Critical nodes: ");
 		}
